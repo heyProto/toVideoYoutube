@@ -169,7 +169,6 @@ export default class EditCard extends React.Component {
         </div>
       )
     } else {
-      var size = this.state.mode === 'col7' ? 640 : 320;
       return (
         <div className="proto-container">
           <div className="ui grid form-layout">
@@ -225,7 +224,7 @@ export default class EditCard extends React.Component {
                     </a>
                   </div>
                 </div>
-                <div style={{width: size, margin: '0 auto'}}>
+                <div style={{width: 'fit-content', margin: '0 auto'}}>
                   <Media
                     mode={this.state.mode}
                     dataJSON={this.state.dataJSON}

@@ -107,6 +107,7 @@ export default class toMedia extends React.Component {
             <iframe
               width="100%"
               height="250"
+              className={`${this.props.mode}`}
               src={`https://www.youtube.com/embed/${url.search.v}`}
               frameBorder="0"
               allowFullScreen>
