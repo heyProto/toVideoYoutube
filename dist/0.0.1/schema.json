@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "http://example.com/example.json",
+  "properties": {
+    "data": {
+      "properties": {
+        "media_url": {
+          "id": "/properties/data/properties/media_url",
+          "type": "string",
+          "title": "Url",
+          "default": ""
+        }
+      },
+      "type": "object",
+      "required": [
+        "media_url"
+      ]
+    }
+  },
+  "required": [
+    "data"
+  ],
+  "type": "object"
+}
