@@ -10,7 +10,7 @@ export default class EditCard extends React.Component {
     this.state = {
       step: 1,
       dataJSON: {},
-      mode: "col4",
+      mode: "col7",
       publishing: false,
       schemaJSON: undefined,
       uiSchemaJSON: {},
@@ -142,9 +142,8 @@ export default class EditCard extends React.Component {
       if (mode !== prevState.mode) {
         newMode = mode;
       } else {
-        newMode = prevState.mode
+        newMode = prevState.mode;
       }
-
       return {
         mode: newMode
       }
@@ -177,7 +176,7 @@ export default class EditCard extends React.Component {
                 <div>
                   <div className="section-title-text">Fill the form</div>
                   <div className="ui label proto-pull-right">
-                    toMedia
+                    VideoYoutube
                   </div>
                 </div>
                 <JSONSchemaForm schema={this.renderSchemaJSON()}

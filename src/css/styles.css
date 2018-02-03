@@ -18,6 +18,9 @@ body{
 #protograph_div.protograph-mobile-mode {
   width: 320px;
 }
+.protograph-toMedia-youtube{
+  width:100%;
+}
 .protograph-toMedia-image {
   height: 250px;
 }
