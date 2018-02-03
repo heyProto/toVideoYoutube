@@ -5,8 +5,8 @@
   "properties": {
     "data": {
       "properties": {
-        "media_url": {
-          "id": "/properties/data/properties/media_url",
+        "youtube_url": {
+          "id": "/properties/data/properties/youtube_url",
           "type": "string",
           "title": "Url",
           "default": ""
@@ -14,7 +14,7 @@
       },
       "type": "object",
       "required": [
-        "media_url"
+        "youtube_url"
       ]
     }
   },

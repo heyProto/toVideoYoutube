@@ -18,26 +18,26 @@ body{
 #protograph_div.protograph-mobile-mode {
   width: 320px;
 }
-.protograph-toMedia-youtube{
+.protograph-toVideoYoutube-youtube{
   width:100%;
 }
-.protograph-toMedia-image {
+.protograph-toVideoYoutube-image {
   height: 250px;
 }
-.protograph-toMedia-image img {
+.protograph-toVideoYoutube-image img {
   height: 250px;
 }
-.protograph-toMedia-media-description {
+.protograph-toVideoYoutube-youtube-description {
   padding: 10px;
 }
-.protograph-toMedia-title {
+.protograph-toVideoYoutube-title {
   font-size: 16px;
   font-weight: bold;
   margin: 0px;
   padding: 10px;
   padding-bottom: 5px;
 }
-.protograph-toMedia-audio audio {
+.protograph-toVideoYoutube-audio audio {
   width: 100%;
 }
 #ProtoScreenshot {

@@ -6,19 +6,19 @@ window.ProtoGraph = window.ProtoGraph || {};
 window.ProtoGraph.Card = window.ProtoGraph.Card || {};
 
 
-ProtoGraph.Card.toMedia = function () {
-  this.cardType = 'Media';
+ProtoGraph.Card.toVideoYoutube = function () {
+  this.cardType = 'VideoYoutube';
 }
 
-ProtoGraph.Card.toMedia.prototype.init = function (options) {
+ProtoGraph.Card.toVideoYoutube.prototype.init = function (options) {
   this.options = options;
 }
 
-ProtoGraph.Card.toMedia.prototype.getData = function (data) {
+ProtoGraph.Card.toVideoYoutube.prototype.getData = function (data) {
   return this.containerInstance.exportData();
 }
 
-ProtoGraph.Card.toMedia.prototype.renderCol4 = function (data) {
+ProtoGraph.Card.toVideoYoutube.prototype.renderCol4 = function (data) {
   this.mode = 'col4';
   ReactDOM.render(
     <Card

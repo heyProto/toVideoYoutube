@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import Media from './card.jsx';
+import VideoYoutube from './card.jsx';
 import JSONSchemaForm from '../../lib/js/react-jsonschema-form';
 
 export default class EditCard extends React.Component {
@@ -224,7 +224,7 @@ export default class EditCard extends React.Component {
                   </div>
                 </div>
                 <div style={{width: 'fit-content', margin: '0 auto'}}>
-                  <Media
+                  <VideoYoutube
                     mode={this.state.mode}
                     dataJSON={this.state.dataJSON}
                     schemaJSON={this.state.schemaJSON}

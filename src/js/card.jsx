@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
-export default class toMedia extends React.Component {
+export default class toVideoYoutube extends React.Component {
   constructor(props) {
     super(props)
 
@@ -97,11 +97,11 @@ export default class toMedia extends React.Component {
     };
   }
 
-  renderMedia() {
+  renderVideoYoutube() {
     let data = this.state.dataJSON.data;
-    let url = this.parseUrl(data.media_url);
+    let url = this.parseUrl(data.youtube_url);
     return (
-      <div className="protograph-toMedia-youtube">
+      <div className="protograph-toVideoYoutube-youtube">
         {
           url.search.v ?
             <iframe
@@ -127,7 +127,7 @@ export default class toMedia extends React.Component {
       return (
         <div id="protograph-div" className="protograph-laptop-mode">
           <div className={`protograph-card ${this.props.mode}`}>
-            <div className="protograph-toMedia-media-container">{this.renderMedia()}</div>
+            <div className="protograph-toVideoYoutube-youtube-container">{this.renderVideoYoutube()}</div>
           </div>
         </div>
       )
