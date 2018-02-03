@@ -106,6 +106,7 @@ export default class toVideoYoutube extends React.Component {
           url.search.v ?
             <iframe
               width="100%"
+              title={data.title}
               height="250"
               className={`${this.props.mode}`}
               src={`https://www.youtube.com/embed/${url.search.v}`}

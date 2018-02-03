@@ -5,16 +5,20 @@
   "properties": {
     "data": {
       "properties": {
+        "title":{
+          "type": "string",
+          "title": "Title"
+        },
         "youtube_url": {
           "id": "/properties/data/properties/youtube_url",
           "type": "string",
-          "title": "Url",
-          "default": ""
+          "title": "Url"
         }
       },
       "type": "object",
       "required": [
-        "youtube_url"
+        "youtube_url",
+        "title"
       ]
     }
   },
