@@ -13,7 +13,6 @@
       if (origin == 'https://s3.ap-south-1.amazonaws.com') {
         let bucket_name = window.location.pathname.split('/')['1'];
         base_url = origin + "/" + bucket_name;
-
       } else if (origin === 'https://dkqrqc7q64awx.cloudfront.net') {
         base_url = origin;
       } else {
@@ -51,16 +50,19 @@
       requests: {
         receive: function(mode) {
           if(typeof (view_cast_id) !== 'undefined' && typeof(schema_id) !== 'undefined'){
-            var that = this;
+            var that = this,
             data_base_path = base_url + "/" + view_cast_id,
             schema_base_path = base_url + "/" + schema_id;
 
             x.init({
               selector: document.querySelector('#card-name-div'),
-              data_url: "sample.json",
-              schema_url: "schema.json",
-              configuration_url: "configuration_sample.json",
-              configuration_schema_url: 'configuration_schema.json',
+              data_url: data_base_path + "/data.json",
+              schema_url: schema_base_path + "/schema.json",
+              configuration_url: data_base_path + "/view_cast.json",
+              // data_url: 'sample.json',
+              // schema_url: 'schema.json',
+              // configuration_url: 'configuration_sample.json',
+              configuration_schema_url: 'configuration_schema.json'
             })
             renderWithMode(mode);
           }
@@ -72,15 +74,14 @@
           var intervalId = setInterval(function(){
             try {
               clientRect = x.getData();
+              if(clientRect.height){
+                var height = clientRect.height,
+                  width = clientRect.width;
+                that.send("resize_frame", {height: height, width: width});
+                clearInterval(intervalId);
+              }
             } catch (err) {}
-            if(clientRect.height){
-              var height = clientRect.height,
-                width = clientRect.width;
-              that.send("resize_frame", {height: height, width: width});
-              clearInterval(intervalId);
-            }
           }, 10)
-
         },
         change_mode: function(mode){
           renderWithMode(mode);
