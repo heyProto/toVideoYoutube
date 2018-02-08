@@ -4,21 +4,8 @@
     <meta charset = "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>toVideoYoutube</title>
-    <link rel="stylesheet" type="text/css" href="https://dwln9tzsi7g07.cloudfront.net/Assets/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.protograph.pykih.com/Assets/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="card.min.css">
-    <script type="text/javascript">
-      var origin, base_url;
-      // Setting variables from environment
-      origin = window.location.origin;
-      if (origin == 'https://s3.ap-south-1.amazonaws.com') {
-        let bucket_name = window.location.pathname.split('/')['1'];
-        base_url = origin + "/" + bucket_name;
-      } else if (origin === 'https://dkqrqc7q64awx.cloudfront.net') {
-        base_url = origin;
-      } else {
-        base_url = origin;
-      }
-    </script>
 
   </head>
   <body>
@@ -44,11 +31,13 @@
 
     let view_cast_id = findGetParameter('view_cast_id'),
       schema_id = findGetParameter('schema_id'),
-      mode = findGetParameter('mode');
+      mode = findGetParameter('mode'),
+      base_url = findGetParameter('base_url') || "https://cdn.protograph.pykih.com",
+      schema_base_url = "https://cdn.protograph.pykih.com";
 
     if(typeof (view_cast_id) !== 'undefined' && typeof(schema_id) !== 'undefined'){
       var  data_base_path = base_url + "/" + view_cast_id,
-        schema_base_path = base_url + "/" + schema_id;
+        schema_base_path = schema_base_url + "/" + schema_id;
 
       x.init({
         selector: document.querySelector('#card-name-div'),
@@ -79,6 +68,7 @@
           x.renderCol7();
           break;
         case "col16":
+        default:
           x.renderCol16();
           break;
       }
