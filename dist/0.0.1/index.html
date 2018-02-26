@@ -29,14 +29,8 @@
     }
 
     let view_cast_id = findGetParameter('view_cast_id'),
-<<<<<<< HEAD
       domain_name = (findGetParameter('domain') || ""),
       base_url = findGetParameter('base_url') || "https://cdn.protograph.pykih.com";
-=======
-      schema_id = findGetParameter('schema_id'),
-      base_url = findGetParameter('base_url') || "https://cdn.protograph.pykih.com",
-      schema_base_url = "https://cdn.protograph.pykih.com";
->>>>>>> 7adc4981edaa0cde6764fb3473548e452a664f72
 
     var ReceiverConsumer = Oasis.Consumer.extend({
       requests: {
@@ -44,11 +38,7 @@
           if(typeof (view_cast_id) !== 'undefined'){
             var that = this,
             data_base_path = base_url + "/" + view_cast_id,
-<<<<<<< HEAD
             params;
-=======
-            schema_base_path = schema_base_url + "/" + schema_id;
->>>>>>> 7adc4981edaa0cde6764fb3473548e452a664f72
 
            params = {
               selector: document.querySelector('#card-name-div'),
