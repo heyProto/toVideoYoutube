@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { render as ReactDOMRender, hydrate as ReactDOMHydrate } from 'react-dom';
 import Card from './src/js/card.jsx';
 
 window.ProtoGraph = window.ProtoGraph || {};
@@ -40,16 +40,27 @@ ProtoGraph.Card.toVideoYoutube.prototype.renderCol16 = function(data) {
     this.render();
 }
 ProtoGraph.Card.toVideoYoutube.prototype.render = function(data) {
-    render( <
-        Card dataURL = { this.options.data_url }
-        mode = { this.mode }
-        siteConfigURL = { this.options.site_config_url }
-        siteConfigs = { this.options.site_configs }
-        ref = {
-            (e) => {
-                this.containerInstance = this.containerInstance || e;
-            }
-        }
-        />,
-        this.options.selector);
+    if (this.options.isFromSSR) {
+        ReactDOMHydrate(
+            <Card
+                mode={this.mode}
+                dataJSON={this.options.initialState.dataJSON}
+            />,
+            this.options.selector);
+    } else {
+        ReactDOMRender(
+            <Card
+                dataURL = { this.options.data_url }
+                mode = { this.mode }
+                siteConfigURL = { this.options.site_config_url }
+                siteConfigs = { this.options.site_configs }
+                ref = {
+                    (e) => {
+                        this.containerInstance = this.containerInstance || e;
+                    }
+                }
+                />,
+            this.options.selector
+        );
+    }
 }

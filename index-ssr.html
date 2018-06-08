@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Sarala" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./src/css/styles.css">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+</head>
+<body>
+
+    <div id="card" class="test-card">
+        <div id="protograph-div" class="protograph-laptop-mode" data-reactroot="">
+            <div class="protograph-card col3">
+                <div class="protograph-toVideoYoutube-youtube-container">
+                    <div class="protograph-toVideoYoutube-youtube">
+                        <iframe width="100%" title="Title" height="250" class="col3" src="https://www.youtube.com/embed/CtP4crE9LxE"
+                            frameBorder="0" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./dist/0.0.1/card.min.js"></script>
+    <script type="text/javascript">
+        var x = new ProtoGraph.Card.toVideoYoutube();
+        x.init({
+            selector: document.querySelector('#card'),
+            isFromSSR: true,
+            initialState: {
+                dataJSON: {
+                    "data": {
+                        "youtube_url": "https://www.youtube.com/watch?v=CtP4crE9LxE",
+                        "title": "Title"
+                    }
+                }
+            }
+        });
+        // x.renderCol3();
+        x.renderCol7();
+    </script>
+
+</body>
+</html>

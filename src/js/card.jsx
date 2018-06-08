@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { parse as parseURL } from 'url';
 import { all as axiosAll, get as axiosGet, spread as axiosSpread } from 'axios';
 
 export default class toVideoYoutube extends React.Component {
@@ -70,9 +70,9 @@ export default class toVideoYoutube extends React.Component {
   }
 
   parseUrl(url) {
-    var parser = document.createElement('a'),
+    var parser = parseURL(url), //document.createElement('a'),
       search;
-    parser.href = url;
+    // parser.href = url;
     search = this.parseQuery(parser.search);
     return {
       protocol: parser.protocol, // => "http:"
@@ -124,7 +124,7 @@ export default class toVideoYoutube extends React.Component {
       )
     }
   }
-  
+
   render() {
     return this.renderCol();
   }
