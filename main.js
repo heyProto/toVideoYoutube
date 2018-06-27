@@ -18,27 +18,27 @@ ProtoGraph.Card.toVideoYoutube.prototype.getData = function(data) {
     return this.containerInstance.exportData();
 }
 
-ProtoGraph.Card.toVideoYoutube.prototype.renderCol2 = function(data) {
-    this.mode = 'col2';
-    this.render();
-}
+// ProtoGraph.Card.toVideoYoutube.prototype.renderCol2 = function(data) {
+//     this.mode = 'col2';
+//     this.render();
+// }
 
-ProtoGraph.Card.toVideoYoutube.prototype.renderCol3 = function(data) {
-    this.mode = 'col3';
-    this.render();
-}
-ProtoGraph.Card.toVideoYoutube.prototype.renderCol4 = function(data) {
-    this.mode = 'col4';
-    this.render();
-}
-ProtoGraph.Card.toVideoYoutube.prototype.renderCol7 = function(data) {
-    this.mode = 'col7';
-    this.render();
-}
-ProtoGraph.Card.toVideoYoutube.prototype.renderCol16 = function(data) {
-    this.mode = 'col16';
-    this.render();
-}
+// ProtoGraph.Card.toVideoYoutube.prototype.renderCol3 = function(data) {
+//     this.mode = 'col3';
+//     this.render();
+// }
+// ProtoGraph.Card.toVideoYoutube.prototype.renderCol4 = function(data) {
+//     this.mode = 'col4';
+//     this.render();
+// }
+// ProtoGraph.Card.toVideoYoutube.prototype.renderCol7 = function(data) {
+//     this.mode = 'col7';
+//     this.render();
+// }
+// ProtoGraph.Card.toVideoYoutube.prototype.renderCol16 = function(data) {
+//     this.mode = 'col16';
+//     this.render();
+// }
 ProtoGraph.Card.toVideoYoutube.prototype.render = function(data) {
     if (this.options.isFromSSR) {
         ReactDOMHydrate(
@@ -51,7 +51,6 @@ ProtoGraph.Card.toVideoYoutube.prototype.render = function(data) {
         ReactDOMRender(
             <Card
                 dataURL = { this.options.data_url }
-                mode = { this.mode }
                 siteConfigURL = { this.options.site_config_url }
                 siteConfigs = { this.options.site_configs }
                 ref = {

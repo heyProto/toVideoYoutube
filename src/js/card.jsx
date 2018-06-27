@@ -98,7 +98,6 @@ export default class toVideoYoutube extends React.Component {
               width="100%"
               title={data.title}
               height="250"
-              className={`${this.props.mode}`}
               src={`https://www.youtube.com/embed/${url.search.v}`}
               frameBorder="0"
               allowFullScreen>
@@ -117,7 +116,7 @@ export default class toVideoYoutube extends React.Component {
       const data = this.state.dataJSON.data;
       return (
         <div id="protograph-div" className="protograph-laptop-mode">
-          <div className={`protograph-card ${this.props.mode}`}>
+          <div className={`protograph-card `}>
             <div className="protograph-toVideoYoutube-youtube-container">{this.renderVideoYoutube()}</div>
           </div>
         </div>

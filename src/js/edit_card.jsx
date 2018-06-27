@@ -184,7 +184,7 @@ export default class EditCard extends React.Component {
               </div>
               <div className="twelve wide column proto-card-preview proto-share-card-div">
                 <div className="protograph-menu-container">
-                  <div className="ui compact menu">
+                  {/* <div className="ui compact menu">
                     <a className={`item ${this.state.mode === 'col2' ? 'active' : ''}`}
                       data-mode='col2'
                       onClick={(e) => this.toggleMode(e)}
@@ -215,7 +215,7 @@ export default class EditCard extends React.Component {
                     >
                       col-16
                     </a>
-                  </div>
+                  </div> */}
                 </div>
                 <div style={{width: 'fit-content', margin: '0 auto'}}>
                   <VideoYoutube
