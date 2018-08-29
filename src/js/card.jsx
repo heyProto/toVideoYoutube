@@ -115,7 +115,7 @@ export default class toVideoYoutube extends React.Component {
     } else {
       const data = this.state.dataJSON.data;
       return (
-        <div id="protograph-div" className="protograph-laptop-mode">
+        <div id="protograph-div" className="protograph-laptop-mode pro-card">
           <div className={`protograph-card `}>
             <div className="protograph-toVideoYoutube-youtube-container">{this.renderVideoYoutube()}</div>
           </div>
