@@ -44,7 +44,7 @@ ProtoGraph.Card.toVideoYoutube.prototype.render = function(data) {
         ReactDOMHydrate(
             <Card
                 mode={this.mode}
-                dataJSON={this.options.initialState.dataJSON}
+                dataURL={this.options.data_url}
             />,
             this.options.selector);
     } else {
